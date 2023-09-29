@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+{% block content %}
+<article data-theme="dark">
+    {% for modelo in modelo %}
+    <table role="grid">
+        <thead>
+          <tr>
+            <th scope="col">Nombre</th>
+            <th scope="col">Ciclo</th>
+            <th scope="col">Lugar</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">{{ modelo.Estudiante.username }}</th>
+            <td>{{ modelo.Ciclo }}</td>
+            <td>{{ modelo.Conferencia }}</td>
+          </tr>
+        </tbody>
+        <tfoot>
+          <tr>
+            <th scope="col">#</th>
+            <td scope="col">Total</td>
+            <td scope="col">Total</td>
+          </tr>
+        </tfoot>
+      </table>
+      {% endfor %}
+</article>
+{% endblock %}
